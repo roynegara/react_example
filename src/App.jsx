@@ -1,11 +1,9 @@
 import { useState } from "react";
-
 import axios from "axios";
 import { useEffect } from "react";
 
 function App() {
   const [menus, setMenus] = useState([]);
-
   const getMenusData = () => {
     axios
       .get("https://api.mudoapi.tech/menus")
@@ -48,7 +46,6 @@ function App() {
             src={item.imageUrl}
             alt={item.name}
           />
-
           <h3>Harga : {item.priceFormatted}</h3>
         </div>
       ))}
